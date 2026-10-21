@@ -1,0 +1,13 @@
+<!-- @for (post of postsList; track post.id) {
+     <p>Título: {{ post.title }}</p>
+} -->
+
+<!-- <form #usuarioForm="ngForm" (ngSubmit)="enviarForm()">
+  Nome: <input [(ngModel)]="nomeUsuario" name="nomeUsuario" required />
+  <button [disabled]="!usuarioForm.form.valid" type="submit">Enviar</button>
+</form> -->
+
+<form [formGroup]="usuarioForm" (ngSubmit)="enviarFormulario()">
+  Nome: <input formControlName="name" />
+  <button type="submit" [disabled]="!usuarioForm.valid">Enviar</button>
+</form>

@@ -1,0 +1,51 @@
+<p>{{tituloHeader}}</p> <!-- interpolacao ele vai pegar o valor de tituloHeader no header.ts e exibir na tela -->
+
+<span [class.minha-cor]="aplicarClasse">Titulo</span> <!-- class binding - se aplicarClasse for true ele vai aplicar a classe minha-cor no span -->
+
+<button (click)="aplicarCss()">alterando o elemento html usando binding de classe</button>
+
+<h3 [style.color]="estiloCor">alterando o elemento html usando binding de estilo</h3>
+<button (click)="atualizarCor()">alterando o elemento html usando binding de estilo</button>
+
+<br>
+
+<!-- {{retornarTitulo()}}  interpolacao ele chamar esse metodo no header.ts e vai pegar o valor de retornarTitulo no header.ts e exibir na tela -->
+
+<button [disabled]="habilitarBotao"></button><!-- property binding - botao desabilitado se habilitarBotao for true la na classe do header.ts-->
+
+<br>
+
+<!-- <button (click)="atualizarTitulo()">Atualizar Titulo</button> event binding - quando clicar no botao ele vai chamar o metodo atualizarTitulo() que esta no header.ts e vai atualizar o valor de tituloHeader para Isabela -->
+
+<!-- <input [value]="valorInput"/>  one way data binding o valor vem do header.ts para o header.html -->
+
+<button (click)="atualizarInput()">Atualizar Input</button>
+
+<input [(ngModel)]="valorInput"/> <!-- two way data binding o valor do input vai para o header.ts e o valor do header.ts vai para o input -->
+
+@if(iforelse === 'if') {
+  <h1>caiu no if</h1>
+}@else {
+  <h1>caiu no else</h1>
+}
+
+@switch (iforelse) {
+  @case ('if') {
+    <h1>caiu no switch</h1>
+  }
+  @default {
+    <p>caiu no else</p>
+  }
+}
+
+@for(usuario of usuarios; track usuario.id) {
+    <p>{{usuario.nome}}</p>
+}
+
+<h1>{{titulo}}</h1>
+
+<button (click)="emitirValor()">Emitir Valor</button>
+
+<p>recebendo o usuarioAtual do service:  {{_storageService.usuarioAtual}}</p>
+
+<button (click)="atualizarUsuario()">Atualizar Usuario</button>
