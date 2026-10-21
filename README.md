@@ -1,59 +1,114 @@
-# PrincipaisFuncionalidadesAngular
+# Principais Funcionalidades do Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.2.
+Projeto desenvolvido para praticar os principais recursos do Angular, com exemplos de data binding, componentes, comunicação entre componentes, diretivas de controle de fluxo, formulários, serviços e navegação com rotas.
 
-## Development server
+## Tecnologias utilizadas
 
-To start a local development server, run:
+- [Angular](https://angular.dev/) 22
+- TypeScript
+- HTML e CSS
+- Angular Router
+- Angular Forms
+- RxJS
+- JSONPlaceholder (API pública para testes)
 
-```bash
-ng serve
-```
+## Funcionalidades exploradas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 1. Componentes e comunicação
 
-## Code scaffolding
+- Organização da aplicação em componentes, como `App`, `Header` e `Content`.
+- Uso de `@Input()` para receber dados do componente pai.
+- Uso de `@Output()` e `EventEmitter` para emitir eventos do componente filho para o componente pai.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 2. Data binding
 
-```bash
-ng generate component component-name
-```
+Exemplos práticos de diferentes formas de vincular dados à interface:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Interpolação:** exibição de valores com `{{ }}`.
+- **Property binding:** vinculação de propriedades, como o estado `disabled` de um botão.
+- **Event binding:** execução de métodos a partir de eventos, como `(click)`.
+- **Two-way data binding:** sincronização entre o valor de um campo e a propriedade correspondente usando `[(ngModel)]`.
 
-```bash
-ng generate --help
-```
+### 3. Estilização dinâmica
 
-## Building
+- Aplicação condicional de classes CSS com `[class.minha-cor]`.
+- Alteração dinâmica de estilos com `[style.color]`.
 
-To build the project run:
+### 4. Controle de fluxo no template
 
-```bash
-ng build
-```
+Prática das estruturas de controle de fluxo do Angular:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- `@if` e `@else`
+- `@switch` e `@case`
+- `@for`, com identificação dos itens por meio de `track`
 
-## Running unit tests
+### 5. Formulários
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- Formulário baseado em template com `ngModel` (exemplo comentado).
+- Formulário reativo com `FormGroup`, `FormControl` e `Validators`.
+- Validação de campo obrigatório e controle do botão de envio conforme a validade do formulário.
 
-```bash
-ng test
-```
+### 6. Rotas
 
-## Running end-to-end tests
+Navegação entre componentes usando Angular Router:
 
-For end-to-end (e2e) testing, run:
+- `/header` — exibe o componente `Header`.
+- `/content` — exibe o componente `Content`.
+- `routerLink` para navegar e `router-outlet` para renderizar o componente da rota ativa.
 
-```bash
-ng e2e
-```
+### 7. Serviços e requisições HTTP
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Uso de serviços para separar responsabilidades da lógica dos componentes.
+- Requisição HTTP para a API pública JSONPlaceholder, buscando uma lista de posts.
+- Exemplo de atualização de um valor compartilhado por meio de um serviço.
 
-## Additional Resources
+## Como executar o projeto
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) compatível com a versão do Angular utilizada.
+- npm, instalado junto com o Node.js.
+
+### Instalação
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/brunowwdev/principais-funcionalidades-angular.git
+   ```
+
+2. Entre na pasta do projeto:
+
+   ```bash
+   cd principais-funcionalidades-angular
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm start
+   ```
+
+5. Abra no navegador o endereço exibido no terminal, normalmente `http://localhost:4200/`.
+
+## Comandos disponíveis
+
+| Comando | Descrição |
+| --- | --- |
+| `npm start` | Inicia o servidor de desenvolvimento. |
+| `npm run build` | Compila a aplicação para produção. |
+| `npm test` | Executa os testes configurados no projeto. |
+
+## Objetivo
+
+Consolidar os fundamentos do Angular por meio de exemplos pequenos e práticos, servindo como material de estudo e referência para o desenvolvimento de aplicações web.
+
+---
+
+Desenvolvido por **Bruno Manhães Alves**.
